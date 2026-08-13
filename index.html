@@ -344,12 +344,14 @@ p.body,
 .disclaimer{width:100%;max-width:none}
 a{overflow-wrap:anywhere}
 
-@media(max-width:760px){
+@media(max-width:900px){
   body{font-size:16px;line-height:1.66;overflow-wrap:anywhere}
-  .wrap{padding-left:16px;padding-right:16px}
+  .wrap{width:100%;max-width:none;padding-left:16px;padding-right:16px}
+  section .wrap>*{width:100%;max-width:100%}
   .topbar{position:relative}
   .topbar .wrap{height:72px;justify-content:flex-start}
   .brand-logo{width:auto;height:62px;max-width:150px}
+  .topnav{display:none}
   section{padding:44px 0}
   .bluf{padding:24px 0 32px}
   .hero{padding:50px 0 42px}
@@ -365,20 +367,26 @@ a{overflow-wrap:anywhere}
   .sec-head h2{font-size:clamp(1.7rem,8vw,2.25rem)}
   .sec-head p{font-size:16.5px;line-height:1.6}
   .update-band{padding:20px 16px}
-  .update-grid{gap:18px}
-  .update-grid .item p{font-size:15px}
-  .actors,.horizon-grid{grid-template-columns:1fr}
+  .update-grid{grid-template-columns:1fr;gap:18px}
+  .update-grid .item p{font-size:16px;line-height:1.66}
+  .actors,.factors,.split,.horizon-grid,.scenario-grid,.indicator-list{grid-template-columns:1fr}
+  .update-grid,.actors,.viz-grid,.factors,.split,.horizon-grid,.scenario-grid,.indicator-list{width:100%;max-width:none;min-width:0}
+  .update-grid>*,.actors>*,.viz-grid>*,.factors>*,.split>*,.horizon-grid>*,.scenario-grid>*,.indicator-list>*{width:100%;max-width:none;min-width:0}
   .actor,.horizon-card,.scenario,.factor{padding:19px 17px}
+  .actor li{font-size:16px;line-height:1.6}
+  .actor li b{font-size:14px}
   .tl{padding-left:0}
   .tl-item{padding-left:36px}
   .tl-line{left:9px}
   .tl-dot{left:2px}
+  .tl-item p,.tl-item p a{font-size:16px;line-height:1.66}
   .viz-card{padding:18px 14px}
   .viz-card figure{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain}
   .viz-card figure svg{display:block;width:620px;max-width:none;height:auto}
   .bar-row .lbl{gap:12px}
   .bar-row .lbl span{font-size:11.5px}
   .brics-step{grid-template-columns:1fr;gap:7px}
+  .brics-step .desc{font-size:16px;line-height:1.66}
   .brics-stats{grid-template-columns:1fr;gap:12px}
   .brics-stats .st{padding-top:12px;border-top:1px solid var(--line-soft)}
   .brics-stats .st:first-child{padding-top:0;border-top:0}
@@ -390,6 +398,8 @@ a{overflow-wrap:anywhere}
   .yardstick{display:grid;grid-template-columns:1fr;gap:6px;width:100%}
   .yardstick .band{min-width:0;text-align:left;padding:8px 10px}
   .box{padding:20px 17px}
+  .factor p,.factor p a,.box p,.box p a,.horizon-card p,.scenario p,.indicator-list li{font-size:16px;line-height:1.66}
+  .materialised{font-size:15px;line-height:1.6}
   .indicator-list{grid-template-columns:1fr}
   .bluf-card{padding:21px 17px}
   .bluf-question{font-size:1.2rem;line-height:1.42}
@@ -398,7 +408,7 @@ a{overflow-wrap:anywhere}
   .bluf-prob b{font-size:2.45rem}
   .bluf-scale{grid-template-columns:1fr;gap:6px}
   .bluf-scale span{font-size:9px;text-align:left;padding:7px 9px;min-width:0}
-  .bluf-summary p{font-size:15.5px}
+  .bluf-summary p{font-size:16px}
   .net-wrap{max-width:100%;padding:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain}
   .net-wrap>svg{display:block;width:680px;max-width:none;height:auto}
   .net-legend{gap:10px;font-size:10px}
