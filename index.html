@@ -8,6 +8,7 @@
 <meta property="og:title" content="Europa 2030: starkare – men inte strategiskt självbärande"/>
 <meta property="og:description" content="Europas dolda 2030-tröskel finns i rymdlagret: spaning, tidig varning, satellitkommunikation, navigering och ledning. INBLICK, Svensk OSINT."/>
 <meta property="og:type" content="article"/>
+<meta name="inblick-version" content="7"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -320,6 +321,22 @@ p.body:last-child{margin-bottom:0}
 .ref-list li{font-size:13.5px;color:var(--ink-soft);line-height:1.55;padding:8px 0;padding-left:26px;text-indent:-26px;border-bottom:1px solid var(--line-soft)}
 .ref-list li a{font-size:13.5px;word-break:break-word}
 .ref-list li b{color:var(--ink);font-weight:500}
+.reference-count{margin:-12px 0 28px;padding:12px 14px;border-left:3px solid var(--teal);background:rgba(79,160,143,.08);color:var(--ink);font-size:14px}
+#referenser,
+#referenser>.wrap,
+#referenser .references-content,
+#referenser .ref-group,
+#referenser .ref-list,
+#referenser .ref-list li{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  transform:none!important;
+  content-visibility:visible!important;
+  max-height:none!important;
+  height:auto!important;
+  overflow:visible!important;
+}
 
 /* footer */
 footer{border-top:1px solid var(--line);padding:44px 0 60px;background:var(--bg)}
@@ -346,6 +363,7 @@ a{overflow-wrap:anywhere}
 
 @media(max-width:900px){
   body{font-size:16px;line-height:1.66;overflow-wrap:anywhere}
+  .reveal{opacity:1;transform:none;transition:none}
   .wrap{width:100%;max-width:none;padding-left:16px;padding-right:16px}
   section .wrap>*{width:100%;max-width:100%}
   .topbar{position:relative}
@@ -413,8 +431,12 @@ a{overflow-wrap:anywhere}
   .net-wrap>svg{display:block;width:680px;max-width:none;height:auto}
   .net-legend{gap:10px;font-size:10px}
   .ref-group{margin-bottom:32px}
-  .ref-list li{padding:10px 0;text-indent:0;font-size:13px;overflow-wrap:anywhere}
-  .ref-list li a{font-size:13px}
+  #referenser{display:block!important;visibility:visible!important;opacity:1!important;position:relative!important;inset:auto!important;clip:auto!important;clip-path:none!important;contain:none!important;content-visibility:visible!important;min-height:1px!important;max-height:none!important;height:auto!important;overflow:visible!important}
+  #referenser>.wrap,#referenser .references-content,#referenser .ref-group,#referenser .ref-list,#referenser .ref-list li{display:block!important;visibility:visible!important;opacity:1!important;position:relative!important;inset:auto!important;clip:auto!important;clip-path:none!important;contain:none!important;content-visibility:visible!important;min-height:0!important;max-height:none!important;height:auto!important;overflow:visible!important;transform:none!important}
+  .reference-count{margin-top:-8px;font-size:15px;line-height:1.55}
+  .ref-group h3{font-size:12px;line-height:1.5}
+  .ref-list li{padding:12px 0;text-indent:0;font-size:15px;line-height:1.62;color:var(--ink-soft);overflow-wrap:anywhere;word-break:normal}
+  .ref-list li a{font-size:15px;overflow-wrap:anywhere;word-break:break-word}
   footer{padding:38px 0 46px}
   .foot-grid{display:grid;grid-template-columns:1fr;gap:22px}
 }
@@ -1166,13 +1188,15 @@ a{overflow-wrap:anywhere}
 <!-- ============ REFERENSER ============ -->
 <section id="referenser" class="refs">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <span class="num">08 · KÄLLOR</span>
       <h2>Referenslista</h2>
       <p>Analysen bygger på öppet material och skiljer mellan bekräftade uppgifter, partskällor, indikationer och analytisk bedömning. Läckta dokument och krigförande parters uppgifter används endast där osäkerheten framgår.</p>
     </div>
 
-    <div class="reveal">
+    <p class="reference-count">86 källposter fördelade på åtta ämnesområden.</p>
+
+    <div class="references-content">
       <div class="ref-group">
         <h3>Officiella dokument och underrättelsebedömningar</h3>
         <ul class="ref-list">
