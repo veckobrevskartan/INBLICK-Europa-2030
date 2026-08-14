@@ -8,7 +8,6 @@
 <meta property="og:title" content="Europa 2030: starkare – men inte strategiskt självbärande"/>
 <meta property="og:description" content="Europas dolda 2030-tröskel finns i rymdlagret: spaning, tidig varning, satellitkommunikation, navigering och ledning. INBLICK, Svensk OSINT."/>
 <meta property="og:type" content="article"/>
-<meta name="inblick-version" content="7"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -132,19 +131,19 @@ p.body{margin:0 0 20px;max-width:74ch}
 p.body:last-child{margin-bottom:0}
 .lead{font-size:19px;color:var(--ink)}
 
-/* callout: uppdatering */
-.update-band{
+/* callout: observationer */
+.observation-band{
   background:linear-gradient(180deg,rgba(79,160,143,.08),rgba(79,160,143,.02));
   border:1px solid rgba(79,160,143,.28);border-left:3px solid var(--teal);
   border-radius:4px;padding:26px 28px;
 }
-.update-band .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;display:flex;align-items:center;gap:9px}
-.update-band .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal)}
-.update-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 34px;margin-top:6px}
-@media(max-width:760px){.update-grid{grid-template-columns:1fr}}
-.update-grid .item h4{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;color:var(--ink);text-transform:uppercase;margin-bottom:6px}
-.update-grid .item p{font-size:15px;color:var(--ink-soft);line-height:1.6}
-.update-grid .item .prov{display:inline-block;margin-top:5px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--teal);letter-spacing:.04em}
+.observation-band .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.observation-band .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal)}
+.observation-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 34px;margin-top:6px}
+@media(max-width:760px){.observation-grid{grid-template-columns:1fr}}
+.observation-grid .item h4{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;color:var(--ink);text-transform:uppercase;margin-bottom:6px}
+.observation-grid .item p{font-size:15px;color:var(--ink-soft);line-height:1.6}
+.observation-grid .item .prov{display:inline-block;margin-top:5px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--teal);letter-spacing:.04em}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
@@ -384,12 +383,12 @@ a{overflow-wrap:anywhere}
   .sec-head{margin-bottom:28px}
   .sec-head h2{font-size:clamp(1.7rem,8vw,2.25rem)}
   .sec-head p{font-size:16.5px;line-height:1.6}
-  .update-band{padding:20px 16px}
-  .update-grid{grid-template-columns:1fr;gap:18px}
-  .update-grid .item p{font-size:16px;line-height:1.66}
+  .observation-band{padding:20px 16px}
+  .observation-grid{grid-template-columns:1fr;gap:18px}
+  .observation-grid .item p{font-size:16px;line-height:1.66}
   .actors,.factors,.split,.horizon-grid,.scenario-grid,.indicator-list{grid-template-columns:1fr}
-  .update-grid,.actors,.viz-grid,.factors,.split,.horizon-grid,.scenario-grid,.indicator-list{width:100%;max-width:none;min-width:0}
-  .update-grid>*,.actors>*,.viz-grid>*,.factors>*,.split>*,.horizon-grid>*,.scenario-grid>*,.indicator-list>*{width:100%;max-width:none;min-width:0}
+  .observation-grid,.actors,.viz-grid,.factors,.split,.horizon-grid,.scenario-grid,.indicator-list{width:100%;max-width:none;min-width:0}
+  .observation-grid>*,.actors>*,.viz-grid>*,.factors>*,.split>*,.horizon-grid>*,.scenario-grid>*,.indicator-list>*{width:100%;max-width:none;min-width:0}
   .actor,.horizon-card,.scenario,.factor{padding:19px 17px}
   .actor li{font-size:16px;line-height:1.6}
   .actor li b{font-size:14px}
@@ -447,7 +446,7 @@ a{overflow-wrap:anywhere}
   .hero{padding-top:42px}
   h1.title{font-size:2rem}
   .gauge .scale{font-size:8.5px}
-  .update-band,.viz-card,.bedq,.verdict-hero,.box,.bluf-card{padding-left:14px;padding-right:14px}
+  .observation-band,.viz-card,.bedq,.verdict-hero,.box,.bluf-card{padding-left:14px;padding-right:14px}
 }
 </style>
 </head>
@@ -529,7 +528,7 @@ a{overflow-wrap:anywhere}
   </div>
 </header>
 
-<!-- ============ LÄGESUPPDATERING ============ -->
+<!-- ============ LÄGESBILD ============ -->
 <section id="lage">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -537,9 +536,9 @@ a{overflow-wrap:anywhere}
       <h2>Femton spår som formar säkerhetsläget 2026</h2>
       <p>Under 2026 har femton snabbföränderliga förlopp rört sig i samma riktning: mot en ordning som håller formellt men urholkas funktionellt. Den samlade källgenomgången förstärker särskilt bilden av snabb militär teknikanpassning, skärpt maritim konfrontation och ett rymdskikt där europeisk kapacitetsuppbyggnad och rysk-kinesisk motförmåga utvecklas parallellt.</p>
     </div>
-    <div class="update-band reveal">
+    <div class="observation-band reveal">
       <div class="tag">Verifierade förlopp · februari till augusti 2026</div>
-      <div class="update-grid">
+      <div class="observation-grid">
         <div class="item">
           <h4>Iran: succession genomförd</h4>
           <p>Efter att Ali Khamenei dödades 28 februari valde Expertförsamlingen hans son <a href="https://en.wikipedia.org/wiki/Mojtaba_Khamenei">Mojtaba Khamenei till tredje högste ledare den 9 mars</a>, med Revolutionsgardets uttalade stöd. Han beskrivs som mer kompromisslös än sin far.</p>
@@ -602,7 +601,7 @@ a{overflow-wrap:anywhere}
         </div>
         <div class="item">
           <h4>IRIS² går från plan till utbyggnad</h4>
-          <p>EU-kommissionen och SpaceRISE undertecknade den 7 augusti genomförandeavtalet för <a href="https://defence-industry-space.ec.europa.eu/european-union-accelerating-and-reinforcing-iris2-2026-08-07_en">IRIS²</a>. Konstellationen utökas till 348 satelliter, de första uppskjutningarna planeras till 2029, konnektivitetstjänster från 2029 och ackrediterade tjänster omkring 2030. Det är en tydlig positiv indikator, men också ett bevis på att europeisk rymdautonomi blir operativ först vid bedömningsperiodens slut.</p>
+          <p>EU-kommissionen och SpaceRISE undertecknade den 7 augusti genomförandeavtalet för <a href="https://defence-industry-space.ec.europa.eu/european-union-accelerating-and-reinforcing-iris2-2026-08-07_en">IRIS²</a>. Konstellationen utökas till 348 satelliter, de första uppskjutningarna planeras till 2029, konnektivitetstjänster från 2029 och ackrediterade tjänster omkring 2030. Det är en tydlig positiv indikator, men också ett bevis på att europeisk rymdautonomi blir operativ först nära 2030.</p>
           <span class="prov">Källa: EU-kommissionen · EUSPA · 7 augusti</span>
         </div>
         <div class="item">
@@ -974,11 +973,6 @@ a{overflow-wrap:anywhere}
       </article>
     </div>
 
-    <div style="margin-top:38px" class="reveal">
-      <h3 style="font-size:1.45rem;margin-bottom:13px;color:var(--ink)">Vad som har förändrats sedan den tidigare bedömningen</h3>
-      <p class="body">Den tidigare spaningsfrågan gällde om stormaktskonkurrensen under 2026 skulle tvinga Europa att accelerera strategisk autonomi. Den utvecklingen är redan synlig i ökade anslag, Readiness 2030, nya industrisamarbeten och diskussionen om att ersätta amerikanska nyckelförmågor. Frågan gav därför ett sannolikt men begränsat analytiskt värde.</p>
-      <p class="body">Den längre horisonten flyttar fokus från politisk riktning till ett prövbart operativt utfall. Den 7 augusti gick IRIS² in i fullskalig utbyggnad och NATO:s APSS och HALO har flyttat från idé till genomförande. Samtidigt visar öppet källmaterial operativt rapporterad rysk störning mot Starlink. <a href="https://www.reuters.com/business/media-telecom/russia-rolling-out-starlink-style-network-faster-than-expected-kyiv-says-2026-08-10/">Ukrainas GUR uppger dessutom att den ryska Rassvet-konstellationen byggs ut snabbare än väntat</a>, medan läckta dokument endast indikerar rysk-kinesiska diskussioner om kontrarymdförmåga. Europa accelererar alltså, men motståndaren anpassar sig samtidigt. Det gör en europeisk 90-dagarsförmåga utan betydande amerikanska stödtjänster fortsatt mindre trolig.</p>
-    </div>
   </div>
 </section>
 
@@ -991,9 +985,9 @@ a{overflow-wrap:anywhere}
       <p>Rymdkrig betyder här inte främst att satelliter skjuts ned. Det omfattar hela kedjan för att störa, vilseleda, begränsa eller slå ut rymdtjänster: radiosändningar, cyberangrepp, påverkan mot markstationer och kablar, kommersiell åtkomstkontroll samt i yttersta fall anti-satellitvapen. <a href="https://www.swfound.org/publications-and-reports/2026-global-counterspace-capabilities-report">Secure World Foundation</a> bedömer att endast icke-destruktiva kontrarymdförmågor hittills används i aktiva konflikter. Det gör hotet mindre spektakulärt men mer omedelbart.</p>
     </div>
 
-    <div class="update-band reveal">
-      <div class="tag">Fyra observationer som skärper 2030-bedömningen</div>
-      <div class="update-grid">
+    <div class="observation-band reveal">
+      <div class="tag">Fyra observationer som formar 2030-bedömningen</div>
+      <div class="observation-grid">
         <div class="item">
           <h4>Rymdlagret multiplicerar all annan förmåga</h4>
           <p>Satelliter bär spaning, tidig varning, säker kommunikation, navigering och tidssynkronisering. Bortfall ger därför inte bara sämre lägesbild, utan långsammare ledning, svagare precisionsverkan och större friktion i luft-, mark- och sjöoperationer.</p>
@@ -1001,7 +995,7 @@ a{overflow-wrap:anywhere}
         </div>
         <div class="item">
           <h4>Europas svar blir operativt sent</h4>
-          <p><a href="https://www.euspa.europa.eu/newsroom-events/news/commission-accelerates-iris2-deployment-enhanced-security-and-expanded">IRIS² första uppskjutningar och konnektivitetstjänster planeras till 2029, med ackrediterade tjänster omkring 2030</a>. Systemet kan därför förbättra europeisk rådighet, men hinner knappast vara fullt utbyggt, övat och stridsverifierat inom samma år som bedömningen löper ut.</p>
+          <p><a href="https://www.euspa.europa.eu/newsroom-events/news/commission-accelerates-iris2-deployment-enhanced-security-and-expanded">IRIS² första uppskjutningar och konnektivitetstjänster planeras till 2029, med ackrediterade tjänster omkring 2030</a>. Systemet kan därför förbättra europeisk rådighet, men hinner knappast vara fullt utbyggt, övat och stridsverifierat före 2030.</p>
           <span class="prov">Källa: EUSPA · 7 augusti 2026</span>
         </div>
         <div class="item">
@@ -1019,7 +1013,7 @@ a{overflow-wrap:anywhere}
 
     <div style="margin-top:38px" class="reveal">
       <h3 style="font-size:1.45rem;margin-bottom:13px;color:var(--ink)">Arktisanalysen visar var beroendekedjan möter marken</h3>
-      <p class="body">Den tidigare INBLICK-analysen om <a href="https://veckobrevskartan.github.io/INBLICK-Arktis-och-sateliter/">Arktis och satelliter</a> stärker 2030-bedömningen på tre punkter. För det första gör polära omloppsbanor SvalSat, Andøya och Esrange till centrala noder för nedlänkning, uppskjutning och kontroll. För det andra visar NATO-projektet <a href="https://www.fhs.se/en/swedish-defence-university/research/our-researchers/research-projects/hybrid-space-submarine-architecture-ensuring-infosec-of-telecommunications.html">HEIST</a> att satelliter ska bära reservtrafik när undervattenskablar skadas: redundans i havsbotten flyttar då en del av risken till rymd- och marksegmentet. För det tredje bygger Sverige egen kapacitet, men genom en blandning av statliga, allierade och kommersiella system.</p>
+      <p class="body">INBLICK-analysen om <a href="https://veckobrevskartan.github.io/INBLICK-Arktis-och-sateliter/">Arktis och satelliter</a> stärker 2030-bedömningen på tre punkter. För det första gör polära omloppsbanor SvalSat, Andøya och Esrange till centrala noder för nedlänkning, uppskjutning och kontroll. För det andra visar NATO-projektet <a href="https://www.fhs.se/en/swedish-defence-university/research/our-researchers/research-projects/hybrid-space-submarine-architecture-ensuring-infosec-of-telecommunications.html">HEIST</a> att satelliter ska bära reservtrafik när undervattenskablar skadas: redundans i havsbotten flyttar då en del av risken till rymd- och marksegmentet. För det tredje bygger Sverige egen kapacitet, men genom en blandning av statliga, allierade och kommersiella system.</p>
       <p class="body"><a href="https://www.forsvarsmakten.se/aktuellt/nyheter/forsvarsmakten-satsar-pa-rymdformagor/">Försvarsmakten anskaffar ett tiotal spaningssatelliter via ICEYE och Planet Labs med start 2026</a>, samtidigt som <a href="https://www.fmv.se/aktuellt--press/aktuella-handelser/fmv-tecknar-avtal-om-satellituppsandningsformaga-fran-esrange/">Esrange ska ge uppskjutningsförmåga 2028</a>. Det är en konkret positiv indikator. Men samma koncentration gör anläggningarna till tyngdpunktsmål för fysisk kartläggning, cyberangrepp, störning och sabotage. Europas nya suveränitetsinfrastruktur är därför både lösning och angreppsyta.</p>
     </div>
 
@@ -1074,7 +1068,7 @@ a{overflow-wrap:anywhere}
     <div class="sec-head reveal">
       <span class="num">07 · BEDÖMNING</span>
       <h2>Europa blir starkare, men inte strategiskt självbärande</h2>
-      <p>Bedömningen kvarstår på 35 procent. IRIS², APSS, HALO, Esrange och nationella satellitprogram är tydliga positiva indikatorer, men de viktigaste rymd- och ersättningsförmågorna blir operativa först nära 2030 och har ännu inte visat uthållighet under samordnad störning.</p>
+      <p>Bedömningen är 35 procent. IRIS², APSS, HALO, Esrange och nationella satellitprogram är tydliga positiva indikatorer, men de viktigaste rymd- och ersättningsförmågorna blir operativa först nära 2030 och har ännu inte visat uthållighet under samordnad störning.</p>
     </div>
 
     <div class="bedq reveal">
